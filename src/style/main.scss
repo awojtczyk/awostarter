@@ -1,0 +1,14 @@
+@import 'mixins';
+@import 'variables';
+@import 'settings';
+@import 'general';
+@import 'components';
+@import 'pages';
+
+// iOS font autoscale fix
+@media screen and (max-device-width: 480px) {
+  body {
+    -webkit-text-size-adjust: none;
+    letter-spacing: 0.15px;
+  }
+}

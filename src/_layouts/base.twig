@@ -1,0 +1,24 @@
+{% block html_head %}
+    {% include '../_partials/_html-header.twig' %}
+    {% block head %}
+    {% endblock %}
+    </head>
+{% endblock %}
+
+<body data-template="base.twig">
+{% block header %}
+    {% include '../_partials/_header.twig' %}
+{% endblock %}
+
+<main role="main" class="site-main">
+    <div class="site-main__content">
+        {% block content %}
+
+        {% endblock %}
+    </div>
+</main>
+
+{% include '../_partials/_footer.twig' %}
+
+</body>
+</html>

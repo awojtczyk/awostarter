@@ -1,0 +1,98 @@
+{
+  "app": {
+    "name": "App name"
+  },
+  "test": "test2",
+  "footer": {
+    "blocks": [
+      {
+        "header": "Header",
+        "list": [
+          {
+            "name": "Link",
+            "link": "#"
+          },
+          {
+            "name": "Link",
+            "link": "#"
+          },
+          {
+            "name": "Link",
+            "link": "#"
+          },
+          {
+            "name": "Link",
+            "link": "#"
+          }
+        ]
+      },
+      {
+        "header": "Header",
+        "list": [
+          {
+            "name": "Link",
+            "link": "#"
+          },
+          {
+            "name": "Link",
+            "link": "#"
+          },
+          {
+            "name": "Link",
+            "link": "#"
+          },
+          {
+            "name": "Link",
+            "link": "#"
+          }
+        ]
+      },
+      {
+        "header": "Header",
+        "list": [
+          {
+            "name": "Link",
+            "link": "#"
+          },
+          {
+            "name": "Link",
+            "link": "#"
+          },
+          {
+            "name": "Link",
+            "link": "#"
+          },
+          {
+            "name": "Link",
+            "link": "#"
+          }
+        ]
+      },
+      {
+        "header": "Header",
+        "list": [
+          {
+            "name": "Link",
+            "link": "#"
+          },
+          {
+            "name": "Link",
+            "link": "#"
+          },
+          {
+            "name": "Link",
+            "link": "#"
+          },
+          {
+            "name": "Link",
+            "link": "#"
+          }
+        ]
+      }
+    ]
+  },
+  "copyright": {
+    "site": "© 2018 Someone",
+    "swift": "Something"
+  }
+}
