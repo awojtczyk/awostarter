@@ -2,29 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="47503fed-efc4-4370-8801-ffe16d5445d9" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/.editorconfig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/_partials/_header.twig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/fonts/.gitkeep" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.eslintrc.js" beforeDir="false" afterPath="$PROJECT_DIR$/.eslintrc.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/plopfile.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/_layouts/base.twig" beforeDir="false" afterPath="$PROJECT_DIR$/app/_layouts/base.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/_partials/_footer.twig" beforeDir="false" afterPath="$PROJECT_DIR$/app/_partials/_footer.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/_partials/_header.twig" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/_partials/_html-header.twig" beforeDir="false" afterPath="$PROJECT_DIR$/app/_layouts/_html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/js/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/scripts/app.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/options.json" beforeDir="false" afterPath="$PROJECT_DIR$/app/_json/options.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/static/.gitkeep" beforeDir="false" afterPath="$PROJECT_DIR$/.deployignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/style/_components.scss" beforeDir="false" afterPath="$PROJECT_DIR$/app/styles/_components.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/style/_general.scss" beforeDir="false" afterPath="$PROJECT_DIR$/app/styles/_general.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/style/_mixins.scss" beforeDir="false" afterPath="$PROJECT_DIR$/app/styles/_mixins.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/style/_pages.scss" beforeDir="false" afterPath="$PROJECT_DIR$/app/styles/_pages.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/style/_settings.scss" beforeDir="false" afterPath="$PROJECT_DIR$/app/styles/_settings.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/style/_variables.scss" beforeDir="false" afterPath="$PROJECT_DIR$/app/styles/_variables.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/style/main.scss" beforeDir="false" afterPath="$PROJECT_DIR$/app/styles/main.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/webpack.config.common.js" beforeDir="false" afterPath="$PROJECT_DIR$/webpack.config.common.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/webpack.config.dev.js" beforeDir="false" afterPath="$PROJECT_DIR$/webpack.config.dev.js" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/dist/" />
     <ignored path="$PROJECT_DIR$/.tmp/" />
@@ -42,8 +23,8 @@
       <file leaf-file-name="package.json" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/package.json">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="313">
-              <caret line="55" column="26" selection-start-line="55" selection-start-column="26" selection-end-line="55" selection-end-column="26" />
+            <state relative-caret-position="212">
+              <caret line="67" column="20" selection-start-line="67" selection-start-column="20" selection-end-line="67" selection-end-column="20" />
             </state>
           </provider>
         </entry>
@@ -76,13 +57,16 @@
         <option value="$PROJECT_DIR$/app/_partials/_html-header.twig" />
         <option value="$PROJECT_DIR$/app/_partials/_svg-icons.twig" />
         <option value="$PROJECT_DIR$/app/_partials/_cookies.twig" />
-        <option value="$PROJECT_DIR$/app/index.html" />
         <option value="$PROJECT_DIR$/app/scripts/app.js" />
         <option value="$PROJECT_DIR$/app/_layouts/base.twig" />
         <option value="$PROJECT_DIR$/deploy.sh" />
         <option value="$PROJECT_DIR$/.deployignore" />
         <option value="$PROJECT_DIR$/.editorconfig" />
         <option value="$PROJECT_DIR$/.eslintrc.js" />
+        <option value="$PROJECT_DIR$/app/index.html" />
+        <option value="$PROJECT_DIR$/app/blank.html" />
+        <option value="$PROJECT_DIR$/plopfile.js" />
+        <option value="$PROJECT_DIR$/app/styles/main.scss" />
         <option value="$PROJECT_DIR$/package.json" />
       </list>
     </option>
@@ -94,6 +78,9 @@
   <component name="JsGulpfileManager">
     <detection-done>true</detection-done>
     <sorting>DEFINITION_ORDER</sorting>
+  </component>
+  <component name="NodeModulesDirectoryManager">
+    <handled-path value="$PROJECT_DIR$/node_modules" />
   </component>
   <component name="NodePackageJsonFileManager">
     <packageJsonPaths>
@@ -127,7 +114,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -139,6 +125,7 @@
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -274,6 +261,12 @@
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
   </component>
+  <component name="VcsManagerConfiguration">
+    <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
+    <option name="CHECK_NEW_TODO" value="false" />
+    <MESSAGE value="Structure fixes &amp; misc improvements." />
+    <option name="LAST_COMMIT_MESSAGE" value="Structure fixes &amp; misc improvements." />
+  </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/deploy">
       <provider selected="true" editor-type-id="text-editor">
@@ -367,9 +360,6 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/style/_fonts.scss" />
-    <entry file="file://$PROJECT_DIR$/app/styles/main.scss">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/styles/_variables.scss">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="165">
@@ -461,13 +451,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="7" column="17" lean-forward="true" selection-start-line="7" selection-start-column="17" selection-end-line="7" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/_layouts/base.twig">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="165">
@@ -517,10 +500,44 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/dist/scripts/app.js">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/dist/styles/main.css">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="240">
+          <caret line="16" selection-end-line="16" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/styles/_partials/.scss" />
+    <entry file="file://$PROJECT_DIR$/app/styles/_partials/asdf.scss" />
+    <entry file="file://$PROJECT_DIR$/app/_partials/_testowykomponent.twig" />
+    <entry file="file://$PROJECT_DIR$/app/styles/_partials/_testowykomponent.scss" />
+    <entry file="file://$PROJECT_DIR$/app/blank.html" />
+    <entry file="file://$PROJECT_DIR$/app/test.html" />
+    <entry file="file://$PROJECT_DIR$/plopfile.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="62">
+          <caret line="42" column="6" lean-forward="true" selection-start-line="42" selection-start-column="6" selection-end-line="42" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/styles/_pages/_page-test.scss" />
+    <entry file="file://$PROJECT_DIR$/app/styles/main.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="210">
+          <caret line="14" lean-forward="true" selection-start-line="14" selection-end-line="14" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/package.json">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="313">
-          <caret line="55" column="26" selection-start-line="55" selection-start-column="26" selection-end-line="55" selection-end-column="26" />
+        <state relative-caret-position="212">
+          <caret line="67" column="20" selection-start-line="67" selection-start-column="20" selection-end-line="67" selection-end-column="20" />
         </state>
       </provider>
     </entry>
