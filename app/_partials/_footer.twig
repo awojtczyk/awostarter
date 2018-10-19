@@ -1,0 +1,36 @@
+{% block footer %}
+
+    <footer class="main-footer">
+        <div class="row" data-equalizer data-equalize-on="medium">
+            {% for block in footer.blocks %}
+                <div class="medium-6 large-3 columns"  data-equalizer-watch >
+                    <div class="footer-nav-block">
+                        <h4>{{ block.header }}</h4>
+                        <ul>
+                            {% for item in block.list %}
+                                <li {% if item.customclass %} class="{{ item.customclass }}" {% endif %}>
+                                    <a href="{{ item.link }}" title="{{ item.name }}">{{ item.name }}</a>
+                                </li>
+                            {% endfor %}
+                        </ul>
+                    </div>
+                </div>
+            {% endfor %}
+        </div>
+        <div class="row">
+            <div class="large-12 columns">
+                <div class="copyright">
+                    <ul>
+                        <li>
+                            {{ copyright.site }}
+                        </li>
+                        <li>
+                            {{ copyright.swift }}
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+{% endblock %}

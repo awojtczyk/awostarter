@@ -4,11 +4,41 @@ const path = require('path');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
 const HTMLWebpackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+const ImageminPlugin = require('imagemin-webpack-plugin').default;
+const imageminMozjpeg = require('imagemin-mozjpeg');
+const options = require('./app/_json/options');
 
-const options = require('./src/options');
-
+const appPath = {
+  scripts: {
+    entry: './app/scripts/app.js',
+    resolve: 'app/scripts',
+    output: './scripts/app.js',
+  },
+  styles: {
+    entry: './app/styles/main.scss',
+    resolve: 'app/styles',
+    output: './css/app.css',
+  },
+  jsons: {
+    entry: './app/_json',
+    output: './_json',
+  },
+  fonts: {
+    entry: './app/fonts',
+    output: './fonts',
+  },
+  images: {
+    entry: './app/images',
+    output: './images',
+  },
+  html: {
+    entry: './app/**/*.html',
+  },
+  dist: 'dist',
+  url: 'http://127.0.0.1:3000/',
+};
 const generateHTMLPlugins = () =>
-  glob.sync('./src/**/*.html').map(
+  glob.sync('./app/**/*.html').map(
     dir =>
       new HTMLWebpackPlugin({
         filename: path.basename(dir), // Output
@@ -20,10 +50,9 @@ module.exports = {
   node: {
     fs: 'empty',
   },
-  entry: ['./src/js/app.js', './src/style/main.scss'],
+  entry: [appPath.scripts.entry, appPath.styles.entry],
   output: {
-    path: path.resolve(__dirname, 'dist'),
-    filename: 'app.bundle.js',
+    filename: appPath.scripts.output,
   },
   module: {
     rules: [
@@ -64,21 +93,38 @@ module.exports = {
           },
         ],
       },
+      {
+        test: require.resolve('jquery'),
+        use: [
+          {
+            loader: 'expose-loader',
+            options: 'jQuery',
+          },
+          {
+            loader: 'expose-loader',
+            options: '$',
+          },
+        ],
+      },
     ],
   },
   plugins: [
     new MiniCssExtractPlugin({
-      // Options similar to the same options in webpackOptions.output
-      // both options are optional
-      filename: '[name].css',
+      filename: 'styles/[name].css',
       chunkFilename: '[id].css',
     }),
     new CopyWebpackPlugin([
-      {
-        from: './src/static/',
-        to: './static/',
-      },
+      { from: appPath.jsons.entry, to: appPath.jsons.output },
+      { from: appPath.fonts.entry, to: appPath.fonts.output },
+      { from: appPath.images.entry, to: appPath.images.output },
     ]),
+    new ImageminPlugin({
+      test: /\.(jpe?g|png|gif|svg)$/i,
+      optipng: {
+        optimizationLevel: 5,
+      },
+      plugins: [imageminMozjpeg({ quality: 90, progressive: true })],
+    }),
     ...generateHTMLPlugins(),
   ],
   stats: {

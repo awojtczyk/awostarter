@@ -1,8 +1,19 @@
 module.exports = {
-  extends: 'airbnb-base',
   env: {
     browser: true,
     node: true,
-    jasmine: true,
+    es6: true,
+  },
+  extends: 'eslint:recommended',
+  parserOptions: {
+    sourceType: 'module',
+  },
+  rules: {
+    indent: ['error', 2],
+    'linebreak-style': ['error', 'unix'],
+    quotes: ['error', 'single'],
+    semi: ['error', 'always'],
+    'no-console': 'off',
+    'no-alert': 'off',
   },
 };
