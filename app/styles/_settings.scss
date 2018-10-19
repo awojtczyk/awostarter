@@ -1,1 +1,37 @@
+// 1. Global
+// ---------
+
+// MAX row width
 $max-width: 1280;
+$contrast-warnings: false;
+$global-font-size: 100%;
+$global-width: rem-calc($max-width);
+$body-font-family: 'Lato', sans-serif;
+
+// @include add-foundation-colors;
+
+// 2. Breakpoints
+// --------------
+$breakpoints: (small: 0px, medium: 660px, large: 1024px);
+$breakpoint-classes: (small medium large);
+
+// 3. The Grid
+// -----------
+$grid-column-count: 12;
+$grid-column-align-edge: false;
+$grid-column-gutter: (small: 20px, medium: 20px);
+
+@include foundation-global-styles;
+@include foundation-grid;
+@include foundation-typography;
+@include foundation-button;
+@include foundation-forms;
+@include foundation-tooltip;
+@include foundation-tabs;
+@include foundation-accordion;
+@include foundation-pagination;
+@include foundation-visibility-classes;
+@include foundation-float-classes;
+@include foundation-reveal;
+@include foundation-dropdown;
+// @include foundation-off-canvas;

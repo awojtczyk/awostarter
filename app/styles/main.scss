@@ -1,9 +1,13 @@
+// Npm Imports:
+@import '~foundation-sites/scss/foundation';
 @import 'mixins';
 @import 'variables';
 @import 'settings';
 @import 'general';
 @import 'components';
+@import 'partials';
 @import 'pages';
+@import 'shame';
 
 // iOS font autoscale fix
 @media screen and (max-device-width: 480px) {
