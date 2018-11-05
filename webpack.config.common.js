@@ -4,8 +4,6 @@ const path = require('path');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
 const HTMLWebpackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
-const ImageminPlugin = require('imagemin-webpack-plugin').default;
-const imageminMozjpeg = require('imagemin-mozjpeg');
 const options = require('./app/_json/options');
 
 const appPath = {
@@ -114,17 +112,10 @@ module.exports = {
       chunkFilename: '[id].css',
     }),
     new CopyWebpackPlugin([
-      { from: appPath.jsons.entry, to: appPath.jsons.output },
-      { from: appPath.fonts.entry, to: appPath.fonts.output },
-      { from: appPath.images.entry, to: appPath.images.output },
+      { from: appPath.jsons.entry, to: appPath.jsons.output, cache: true },
+      { from: appPath.fonts.entry, to: appPath.fonts.output, cache: true },
+      { from: appPath.images.entry, to: appPath.images.output, cache: true },
     ]),
-    new ImageminPlugin({
-      test: /\.(jpe?g|png|gif|svg)$/i,
-      optipng: {
-        optimizationLevel: 5,
-      },
-      plugins: [imageminMozjpeg({ quality: 90, progressive: true })],
-    }),
     ...generateHTMLPlugins(),
   ],
   stats: {
