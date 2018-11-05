@@ -4,6 +4,11 @@ const common = require('./webpack.config.common.js');
 
 module.exports = merge(common, {
   mode: 'development',
+  optimization: {
+    removeAvailableModules: false,
+    removeEmptyChunks: false,
+    splitChunks: false,
+  },
   devServer: {
     open: true,
     port: process.env.PORT || 3000,
