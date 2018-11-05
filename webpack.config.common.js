@@ -2,9 +2,13 @@ const glob = require('glob');
 const path = require('path');
 
 const CopyWebpackPlugin = require('copy-webpack-plugin');
+const webpackDashboard = require('webpack-dashboard/plugin');
 const HTMLWebpackPlugin = require('html-webpack-plugin');
+const FriendlyErrorsWebpackPlugin = require('friendly-errors-webpack-plugin');
+
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const options = require('./app/_json/options');
+const DuplicatePackageCheckerPlugin = require("duplicate-package-checker-webpack-plugin");
 
 const appPath = {
   scripts: {
@@ -107,6 +111,9 @@ module.exports = {
     ],
   },
   plugins: [
+    new webpackDashboard(), // Adding webpack-dashboard plugin. Add more plugins by like this -
+    new DuplicatePackageCheckerPlugin(),
+    new FriendlyErrorsWebpackPlugin(),
     new MiniCssExtractPlugin({
       filename: 'styles/[name].css',
       chunkFilename: '[id].css',
