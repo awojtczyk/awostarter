@@ -23,7 +23,7 @@ module.exports = function(plop) {
       {
         type: 'append',
         path: './app/styles/_partials.scss',
-        template: '@import "_partials/_{{ dashCase filename }}";\n'
+        template: '@import "_pages/_{{ dashCase filename }}";\n'
       },
     ],
   });
