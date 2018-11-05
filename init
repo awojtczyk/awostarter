@@ -6,11 +6,11 @@ read name
 echo "Description of the project: "
 read description
 
-sed -i "" -e 's/"name": "xxxx"/"name": "'"$name"'"/' package.json
-sed -i "" -e 's/"description": "xxxx"/"description": "'"$description"'"/' package.json
+sed -i "" -e 's/"name": "twigstarter"/"name": "'"$name"'"/' package.json
+sed -i "" -e 's/"description": "Webpack 4 static pages template"/"description": "'"$description"'"/' package.json
 
-sed -i "" -e 's/"title": "xxxx"/"title": "'"$name"'"/' config.json
-sed -i "" -e 's/"description": "xxxx"/"description": "'"$description"'"/' config.json
+sed -i "" -e 's/"title": "twigstarter"/"title": "'"$name"'"/' config.json
+sed -i "" -e 's/"description": "Webpack 4 static pages template"/"description": "'"$description"'"/' config.json
 
 rm -fr .git
 git init

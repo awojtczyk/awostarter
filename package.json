@@ -1,7 +1,7 @@
 {
-  "name": "twigstarter",
+  "name": "awostarter",
   "description": "Webpack 4 static pages template",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "keywords": [
     "webpack",
     "twig",
@@ -72,6 +72,7 @@
     "last 2 versions"
   ],
   "dependencies": {
+    "dotenv-webpack": "^1.5.7",
     "foundation-sites": "^6.5.0",
     "js-cookie": "^2.2.0"
   }
