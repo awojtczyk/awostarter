@@ -19,6 +19,7 @@ const app = {
     const bar = jQuery('.cookies');
     const btn = jQuery('.cookies button');
 
+    bar.hide();
     if (Cookies.get('cookiebar') !== 'true') {
       bar.show();
     }

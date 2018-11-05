@@ -38,7 +38,7 @@ npm install
 #### Start the development server
 
 ```
-npm start
+npm run start:dev
 ```
 
 #### Build the production version
